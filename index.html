@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通讯录应用</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>通讯录</h1>
+            <div class="header-buttons">
+                <button id="addContactBtn">添加联系人</button>
+                <button id="importBtn">导入</button>
+                <button id="exportBtn">导出</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="contacts-container">
+                <div class="contacts-list" id="contactsList">
+                    <!-- 联系人列表将动态生成 -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 添加/编辑联系人模态框 -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">添加联系人</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">姓名:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="contact-methods" id="contactMethods">
+                    <!-- 联系方式将动态生成 -->
+                </div>
+                <button type="button" id="addMethodBtn">添加联系方式</button>
+                <div class="form-group">
+                    <label for="notes">备注:</label>
+                    <textarea id="notes"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="favorite">
+                        <input type="checkbox" id="favorite"> 收藏
+                    </label>
+                </div>
+                <button type="submit" id="saveContactBtn">保存</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
