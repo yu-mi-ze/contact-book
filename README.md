@@ -103,7 +103,3 @@ Extreme_Programming/
 - **用户界面**：联系人列表、表单、模态框等组件
 - **导入导出**：Excel文件的解析和生成
 
-
-## 许可证
-
-MIT License
